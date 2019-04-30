@@ -4,7 +4,7 @@
 
   <div class="row">
     {% if products%}
-      <h2>Found {{ productss|length }} of searched term {{message}}</h2>
+      <h2>Found {{ products|length }} of searched term {{message}}</h2>
     {% else %}
       <h2> Found 0 products for the search term {{message}}</h2>
     {% endif %}
@@ -17,7 +17,7 @@
     {% for item in products %}
       <div class="col-sm-6 col-md-3">
           <h1>{{item.name}}</h1>
-          <img src="{{item.product_image.url}}" class="img-responsive" alt="Image">
+          <img src="{{item.product_image.url}}"  class="img-responsive" alt="Image">
           <h1>{{item.price }}</h1>
       </div>
     {% endfor %}

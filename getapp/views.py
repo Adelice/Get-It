@@ -23,12 +23,12 @@ def product(request):
 
 def search_results(request):
 
-    if 'name' in request.GET and request.GET["name"]:
-        search_term = request.GET.get("name")
+    if 'product_name' in request.GET and request.GET["product_name"]:
+        search_term = request.GET.get("product_name")
         searched_products = Product.search_by_name(search_term)
         message = f"{search_term}"
-
-        return render(request, 'search.html',{"message":message,"products": searched_product})
+       
+        return render(request, 'all-products/search.html',{"message":message,"products": searched_products})
 
     else:
         message = "You haven't searched for any term"

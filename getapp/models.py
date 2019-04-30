@@ -18,8 +18,8 @@ class Product(models.Model):
         self.delete()
     @classmethod
     def search_by_name(cls,search_term):
-        products = cls.objects.filter(name__icontains=search_term)
-        return products
+        product = cls.objects.filter(name__icontains=search_term)
+        return product
     
 class Supermarket(models.Model):
     image = models.ImageField(upload_to = 'images/')
