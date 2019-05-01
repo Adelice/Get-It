@@ -25,4 +25,24 @@ class Store(models.Model):
     def get_all_store(cls):
         store= Store.objects.all()
         return store 
+class Product(models.Model):
+    product_pic = models.ImageField(upload_to='products/', blank=True,null=True, verbose_name="product picture")
+    product_name = models.CharField(max_length=60, verbose_name="product")
+    product_price =models.IntegerField( default=0, verbose_name="price")
+    product_store = models.ManyToManyField(Store, verbose_name="availability(ies) in store(s)") 
+
+    class Meta:
+        ordering = ['product_name']
+    @classmethod
+    def get_product_by_id(cls, id):
+       product = cls.objects.get(pk=id)
+       return product
+    @classmethod
+    def get_all_product(cls):
+        product= Product.objects.all()
+        return product 
+    @classmethod
+    def get_store_product(cls, store):
+        products = Product.objects.filter(store__pk =store)
+        return products 
 

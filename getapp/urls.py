@@ -6,6 +6,9 @@ from django.conf.urls import url
 
 urlpatterns=[
      url(r'^$', views.home, name='home'),
+     url(r'^store/(\d+)', views.single_store, name='single_store'),
+     # url(r'^location/(\d+)',views.location,name = 'location')
+     
     
 
 ]
