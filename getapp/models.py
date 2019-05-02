@@ -29,7 +29,7 @@ class Product(models.Model):
     product_name = models.CharField(max_length=60, verbose_name="product",null=True)
     product_price =models.IntegerField( default=0, verbose_name="price")
     product_store = models.ManyToManyField(Store, verbose_name="availability(ies) in store(s)") 
-
+    
     class Meta:
         ordering = ['product_name']
 

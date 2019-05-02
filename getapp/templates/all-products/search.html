@@ -16,9 +16,9 @@
   {% if products %}
     {% for item in products %}
       <div class="col-sm-6 col-md-3">
-          <h1>{{item.name}}</h1>
+          <h1>{{item.product_name}}</h1>
           <img src="{{item.product_pic.url}}"  class="img-responsive" alt="Image">
-          <h1>{{item.price }}</h1>
+          <h1>{{item.product_price }}</h1>
       </div>
     {% endfor %}
   {% endif %}
