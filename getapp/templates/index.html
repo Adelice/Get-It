@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+            {% for st in store %}  
+        <div class="col-md-4">
+                <div class="card" style="width: 18rem; background-color: antiquewhite">
+                        <img class="card-img-top" src="{{st.store_pic.url}}" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{st.store_name}}</h5>
+                          <p class="card-text">{{st.store_location}}</p>
+                          <a href="/store/{{st.id}}" class="btn btn-primary">Shop</a>
+                        </div>
+                    </div>
+ 
+
+
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
+
