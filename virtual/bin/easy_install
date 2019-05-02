@@ -1,4 +1,4 @@
-#!/home/nancy/Desktop/Get-It/virtual/bin/python
+#!/home/alice/Desktop/Get-It/virtual/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
