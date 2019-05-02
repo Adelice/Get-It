@@ -1,0 +1,106 @@
+<!-- <nav class="navbar navbar-expand-sm bg-light navbar-light" style="background-color:chartreuse;">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Get It</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/accounts/login/">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/accounts/register">Register</a>
+      </li>
+    </ul>
+   
+      {% if user.is_authenticated %}
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="">My Profile</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="{}">Stores</a>
+      </li>
+      <li class=nav-item>
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+    </ul>
+    <div class="col-sm-4 col-md-4 navbar-right">
+
+      <form class="navbar-form" role="search" action="{}">
+
+        <div class="input-group">
+          <input type="text" style="font-family: 'Dosis', sans-serif;" class="form-control mr-sm-4" placeholder="Search Item" name="book">
+          <div class="input-group-btn">
+            <button class="btn btn-outline-primary my-2 my-sm-0" style="font-family: 'Dosis', sans-serif;" type="submit">Find</button>
+          </div>
+        </div>
+
+
+      </form>
+
+    </div>
+
+      {% endif %} -->
+
+    
+  </nav> 
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    
+    <a href="{% url 'home' %}" class="navbar-brand"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-AX6-2H0HuNBNM0zmRAnaOGlYuvJg8hPvI0FCCaUBmYA4Dc7uoQ" class="img-responsive logo" width="90px" height="70px"></a>Get It</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+      <span class="navbar-toggler-icon">
+
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+
+   
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="">Stores</a> -->
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="">My Cart</a>
+        </li>
+        <li style="margin-left: 800px;"class="dropdown">
+            <a class="nav-link" href="">Account</a>
+          </li>
+    </ul>
+  </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'home' %}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>

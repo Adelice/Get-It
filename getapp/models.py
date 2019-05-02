@@ -1,5 +1,3 @@
-
-
 # Create your models here.
 from __future__ import unicode_literals
 from django.db import models
@@ -28,6 +26,10 @@ class Store(models.Model):
     def get_all_store(cls):
         store= Store.objects.all()
         return store 
+class Category(models.Model):
+    name = models.CharField(max_length =30) 
+    def __str__(self):
+        return self.category    
 class Product(models.Model):
     product_pic = models.ImageField(upload_to='products/', blank=True,null=True, verbose_name="product picture")
     product_name = models.CharField(max_length=60, verbose_name="product")
@@ -48,3 +50,8 @@ class Product(models.Model):
     def get_store_product(cls, store):
         products = Product.objects.filter(store__pk =store)
         return products 
+
+
+
+
+
