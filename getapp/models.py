@@ -46,3 +46,4 @@ class Product(models.Model):
         products = Product.objects.filter(store__pk =store)
         return products 
 
+
